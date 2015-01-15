@@ -83,7 +83,7 @@ module ErrbitGitlabPlugin
 
       ticket = Gitlab.create_issue(params['project_id'], title, {
         :description => description_summary,
-        :labels => "errbit"
+        :labels => "column:errbit"
       })
 
       Gitlab.create_issue_note(params['project_id'], ticket.id, description_body)
